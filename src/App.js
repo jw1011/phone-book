@@ -1,5 +1,9 @@
 //import logo from "./logo.svg";
+import { Container, Row, Col } from "react-bootstrap";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import ContactForm from "./component/ContactForm";
+import ContactList from "./component/ContactList";
 
 //1. 왼쪽에는 연락처 등록하는 폼이, 오른쪽에는 연락처 검색이 있다
 //2. 리스트에 유저 이름과 전화번호 추가할 수 있다
@@ -9,7 +13,17 @@ import "./App.css";
 function App() {
   return (
     <div>
-      <h1>연락처</h1>
+      <h1 className="title">연락처</h1>
+      <Container>
+        <Row>
+          <Col>
+            <ContactForm />
+          </Col>
+          <Col>
+            <ContactList />
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
